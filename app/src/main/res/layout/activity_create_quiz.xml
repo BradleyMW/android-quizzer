@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateQuiz"
+    android:layout_margin="12dp" >
+
+    <TextView
+        android:id="@+id/new_file_name_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/enter_file_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/new_file_name"/>
+
+    <EditText
+        android:id="@+id/new_file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="12sp"
+        android:text="@string/file_name_hint"
+        android:hint="@string/file_name_hint"
+        android:imeOptions="actionNext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/new_file_name_display" />
+
+    <TextView
+        android:id="@+id/new_quiz_topic_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/enter_quiz_name"
+        app:layout_constraintTop_toTopOf="@id/new_quiz_topic"
+        app:layout_constraintBottom_toBottomOf="@id/new_quiz_topic"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/new_quiz_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="12sp"
+        android:hint="@string/quiz_topic_hint"
+        android:imeOptions="actionNext"
+        app:layout_constraintLeft_toRightOf="@id/new_quiz_topic_display"
+        app:layout_constraintTop_toBottomOf="@id/new_file_name" />
+
+    <Button
+        android:id="@+id/return_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="@string/return_to_main"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/new_quiz_topic"
+        android:onClick="returnToMain" />
+
+    <FrameLayout
+        android:id="@+id/question_display_fragment"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/new_quiz_topic"
+        app:layout_constraintBottom_toBottomOf="@id/midhor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout="@layout/fragment_confirm_selection" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/question_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toBottomOf="@id/midhor"
+        app:layout_constraintBottom_toTopOf="@id/clear_question"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <Button
+        android:id="@+id/clear_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="@string/clear_question"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/save_question"
+        app:layout_constraintRight_toRightOf="@id/delete_question"
+        android:onClick="clearEditQuestion" />
+
+    <Button
+        android:id="@+id/delete_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="@string/delete_question"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="deleteQuestion" />
+
+    <Button
+        android:id="@+id/save_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="@string/save_question"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:onClick="saveQuestion" />
+
+    <View
+        android:id="@+id/midhor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

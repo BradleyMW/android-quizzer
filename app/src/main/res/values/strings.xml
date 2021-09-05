@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">AndroidQuizzer</string>
+
+    <string name="default_name">Nameless Quizzer</string>
+    <string name="no_name">Please enter a name to proceed!</string>
+    <string name="not_professor">Only professors can modify or create quizzes!</string>
+    <string name="is_professor">Welcome, professor! You can now create or edit local quizzes.</string>
+    <string name="login">Enter Name</string>
+    <string name="goto_quiz">TAKE QUIZ</string>
+    <string name="local_quiz">LOCAL QUIZ</string>
+    <string name="online_quiz">ONLINE QUIZ</string>
+    <string name="create_quiz">CREATE QUIZ</string>
+    <string name="edit_quiz">EDIT QUIZ</string>
+    <string name="restart">RESTART</string>
+
+    <string name="file_name_hint">Quiz</string>
+    <string name="quiz_topic_hint">Enter Topic</string>
+    <string name="enter_file_name">File Name: </string>
+    <string name="enter_quiz_name">Quiz Name: </string>
+    <string name="enter_question_text">Enter Question Text Here</string>
+    <string name="enter_answer_text">Enter Answer Text Here</string>
+
+    <string name="remote_repo">https://personal.utdallas.edu/~john.cole/Data/Quizzes.txt</string>
+
+    <string name="confirm_selection">Check Answer</string>
+    <string name="choice1">A.</string>
+    <string name="choice2">B.</string>
+    <string name="choice3">C.</string>
+    <string name="choice4">D.</string>
+
+    <string name="correct_answer">Congratulations! That answer was correct!</string>
+    <string name="wrong_answer">Sorry! The correct answer was </string>
+    <string name="score_display">SCORE:</string>
+    <string name="no_quizzes_found">You have no visible quiz files! Please add some and restart.</string>
+    <string name="title_activity_create_quiz">CreateQuiz</string>
+    <string name="return_to_main">EXIT</string>
+    <string name="save_question">SAVE \nQUESTION</string>
+    <string name="delete_question">DELETE \nQUESTION</string>
+    <string name="clear_question">CLEAR \nQUESTION</string>
+</resources>
